@@ -36,42 +36,54 @@ select * from Admin; select * from UserDetails; select * from AgenciesDetails; s
 
 insert into Admin(Uname,Password) values('shanto','s')
 
-ER DIAGRAM: image
-![image](https://github.com/Korbanul/Travel_World/assets/168090744/9150fa00-76a4-47ad-9408-aec9526fe23d)
+Database Schema: image
+![image](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/367bf1bf-35fd-4603-bdc1-6bac6c4d9562)
+ER DIAGRAM:
+![image](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/0ad31cf9-bd7b-43e1-86da-623405d522a9)
+
 Login Page:
-![image](https://github.com/Korbanul/Travel_World/assets/168090744/7cbb6bdc-a54e-4a29-8507-d2a7f53684dc)
+![image](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/492f7573-9bcb-4e9d-9d86-512f9af8205a)
+
 
 Customer SignUP:
- ![image](https://github.com/Korbanul/Travel_World/assets/168090744/197d0118-7f8b-4dac-8663-db7a63661f85)
+ ![image](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/6f8a8253-922a-4d7b-8a65-213f63951a83)
+
 
 Agencies Sign Up:
- ![image](https://github.com/Korbanul/Travel_World/assets/168090744/3eb009e3-962b-414b-85c1-7947e2434553)
+ ![image](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/f8755a5f-d6ac-4cc0-916e-10758297aff4)
+
 
 Customer Log In:
- 
-![Customer home](https://github.com/Korbanul/Travel_World/assets/168090744/42082ac4-9b98-44df-82da-17336966060e)
+ ![Customer home](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/9a8bd704-abc3-4011-935c-f426e82fcfa8)
+
+
 
 Customer Offer Packages:
-![Screenshot 2024-05-10 194612](https://github.com/Korbanul/Travel_World/assets/168090744/92415d72-50cb-4ac8-af1d-1944edd38819)
+![Screenshot 2024-05-10 194612](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/ff942be1-9f21-4192-bd3d-b3d045df913d)
+
 
 Payment Page
-![PaymentPage](https://github.com/Korbanul/Travel_World/assets/168090744/4b8bea7e-e802-448a-8c99-7dc75ca42bb2)
+![image](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/d7c19e8a-a9ad-4178-819e-216dcd7b3eeb)
 
 Customer Account:
- ![Customer Account](https://github.com/Korbanul/Travel_World/assets/168090744/a83a1411-3dad-4c35-898b-6be68c9e01c2)
+![image](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/142c9fae-949d-4557-aa35-b402924b4c75)
+
 
 Agencies Home:
- ![image](https://github.com/Korbanul/Travel_World/assets/168090744/7449bea1-29fd-41f5-8de3-434cc3afcf2a)
+![Screenshot 2024-05-10 200341](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/74ebc9a7-695b-4bae-b139-c40be4487769)
 
 Agencies Add Packages:
-![Add package](https://github.com/Korbanul/Travel_World/assets/168090744/26120a8b-eea9-4730-b57b-eaa4ee20f36c)
+![image](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/713c7c8a-9bd5-4a55-a18c-afa5f141d3bd)
+
 
 Agencies Bid option:
-![image](https://github.com/Korbanul/Travel_World/assets/168090744/0987d74e-e2d6-4ea0-9df1-2a1be8029d8b)
+![Screenshot 2024-05-10 200425](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/b3ab5b07-d190-4249-a172-80afa677620d)
+
 
 Agencies Account:
- ![Agencies Account](https://github.com/Korbanul/Travel_World/assets/168090744/05fe4ed6-66b6-4309-acc0-71f557491c96)
+ ![image](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/e7871bca-e0aa-4757-9e61-140a18bc6490)
 
 
 Admin Login:
- ![image](https://github.com/Korbanul/Travel_World/assets/168090744/012bd301-30c1-483b-a52b-ce532436a65d)
+![Screenshot 2024-05-10 200639](https://github.com/Korbanul/Travel_World-.NET/assets/168090744/9b0a1325-1579-4804-ba0e-7c1fd72cb44f)
+
