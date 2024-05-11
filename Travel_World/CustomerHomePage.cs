@@ -242,6 +242,7 @@ namespace Travel_World
             //if home button clicked all filter will removed and reinsert all packages
             customerflowLayoutPanel.Controls.Clear();
             string Package_picloc = " ";
+            //Author gazi korbanul islam
             Connect c1 = new Connect();
             var reader = c1.Connection("select * from Package");
             if (reader.HasRows)
@@ -307,7 +308,7 @@ namespace Travel_World
             c1.ShowDialog();
             customerflowLayoutPanel.Controls.Clear();
             Connect con = new Connect();
-            var reader = con.Connection("select * from customoffer");
+            var reader = con.Connection("select * from customoffer where c_id='"+c_id+"'");
             if (reader.HasRows)
             {
                 while (reader.Read())

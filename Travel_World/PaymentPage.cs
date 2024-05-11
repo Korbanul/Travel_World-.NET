@@ -143,7 +143,9 @@ namespace Travel_World
         private void alarafaB_Click(object sender, EventArgs e)
         {
             payment_optionL.Text = "Selected Payment option:Alarafa Bank";
+            //Author Gazi Korbanul islam
             payment_method = "Alarafa Bank";
+          
 
         }
 

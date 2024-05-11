@@ -63,6 +63,8 @@
             updateB = new Button();
             transactionB = new Button();
             custompackageB = new Button();
+            transactionRB = new RadioButton();
+            custompackageRB = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)admindatagrid).BeginInit();
             totaladminP.SuspendLayout();
             total_customerP.SuspendLayout();
@@ -479,12 +481,40 @@
             custompackageB.UseVisualStyleBackColor = false;
             custompackageB.Click += custompackageB_Click;
             // 
+            // transactionRB
+            // 
+            transactionRB.AutoSize = true;
+            transactionRB.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold | FontStyle.Italic);
+            transactionRB.ForeColor = Color.FromArgb(62, 120, 138);
+            transactionRB.Location = new Point(570, 279);
+            transactionRB.Name = "transactionRB";
+            transactionRB.Size = new Size(132, 27);
+            transactionRB.TabIndex = 68;
+            transactionRB.TabStop = true;
+            transactionRB.Text = "Transaction";
+            transactionRB.UseVisualStyleBackColor = true;
+            // 
+            // custompackageRB
+            // 
+            custompackageRB.AutoSize = true;
+            custompackageRB.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold | FontStyle.Italic);
+            custompackageRB.ForeColor = Color.FromArgb(62, 120, 138);
+            custompackageRB.Location = new Point(712, 280);
+            custompackageRB.Name = "custompackageRB";
+            custompackageRB.Size = new Size(170, 27);
+            custompackageRB.TabIndex = 69;
+            custompackageRB.TabStop = true;
+            custompackageRB.Text = "Custom Package";
+            custompackageRB.UseVisualStyleBackColor = true;
+            // 
             // AdminDashbord
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(41, 44, 51);
             ClientSize = new Size(1455, 796);
+            Controls.Add(custompackageRB);
+            Controls.Add(transactionRB);
             Controls.Add(custompackageB);
             Controls.Add(transactionB);
             Controls.Add(updateB);
@@ -562,5 +592,7 @@
         private Button updateB;
         private Button transactionB;
         private Button custompackageB;
+        private RadioButton transactionRB;
+        private RadioButton custompackageRB;
     }
 }

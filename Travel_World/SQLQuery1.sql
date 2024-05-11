@@ -34,15 +34,20 @@ p_id int
 
 alter table UserDetails Add picloc varchar(100); 
 alter table AgenciesDetails  add Username varchar(26);
+alter table Admin  add Admin_id int;
 
 ALTER TABLE Package
 ALTER COLUMN p_country  varchar(200);
+
+ALTER TABLE UserDetails
+ALTER COLUMN Email  varchar(200);
+
 DELETE FROM UserDetails WHERE password='s' or password='ss';
 DELETE FROM Package WHERE p_id>0;
 DELETE FROM TransactionDetails WHERE Payment_id>0;
 DELETE FROM UserDetails WHERE c_id=7;
 DELETE FROM customoffer WHERE custom_id=3;
-DELETE FROM TransactionDetails WHERE Payment_id=3;
+DELETE FROM TransactionDetails WHERE Payment_id>0;
 
 ALTER TABLE Admin
 ADD Balance float
@@ -99,14 +104,14 @@ picloc varchar(150)
 
 );
 
-insert into Admin(Uname,Password) values('shanto','s')
+insert into Admin(Admin_id) values('1')
 insert into Package(p_id,A_id,p_country,p_hotel,p_price,p_capacity,p_duration) values('shanto','s')
 
 UPDATE AgenciesDetails
 SET picloc = 'C:\Users\GKisl\OneDrive\Desktop\organization_icon.png'
 WHERE A_id = '1' OR A_id = '2';
 UPDATE Admin
-SET picloc = 'C:\Users\GKisl\OneDrive\Desktop\IMG_20231228_155144_620.jpg'
+SET Admin_id = '1'
 WHERE Password='s';
 
 

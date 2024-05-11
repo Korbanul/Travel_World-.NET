@@ -260,7 +260,8 @@ namespace Travel_World
                         }
 
                     }
-                    Package_for_Customer_Home_Page pac = new Package_for_Customer_Home_Page(places, picloc, capacity, price, duration, p_id, password, c_id, A_id, "agencies_bid");
+                    Package_for_Customer_Home_Page pac = new Package_for_Customer_Home_Page(places, picloc, capacity, price, duration, p_id, password, c_id, A_id, "agencies_bid");//Author GAZI KORBANUL ISLAM
+
 
                     flowLayoutpanel.Controls.Add(pac);
 

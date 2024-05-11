@@ -144,6 +144,7 @@
             Controls.Add(agencies_nameL);
             Controls.Add(agencies_pictureBox);
             Name = "Agencies_account";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Agencies_account";
             Load += Agencies_account_Load_1;
             ((System.ComponentModel.ISupportInitialize)agencies_pictureBox).EndInit();

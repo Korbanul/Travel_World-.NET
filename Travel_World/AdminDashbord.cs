@@ -179,7 +179,7 @@ namespace Travel_World
             Connect connect = new Connect();
             if (adminRB.Checked)
             {
-                var reader = connect.Connection("select * from Admin Where Ad_id='" + id + "'");
+                var reader = connect.Connection("select * from Admin Where Admin_id='" + id + "'");
                 DataTable dt = new DataTable();
                 dt.Load(reader);
                 admindatagrid.DataSource = dt;
@@ -201,7 +201,20 @@ namespace Travel_World
             }
             else if (packageRB.Checked)
             {
+                //GAZI KORBANUL ISLAM
                 var reader = connect.Connection("select * from Package Where p_id='" + id + "'");
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                admindatagrid.DataSource = dt;
+            }else if(transactionRB.Checked)
+            {
+                var reader = connect.Connection("select * from TransactionDetails Where Payment_id='" + id + "'");
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                admindatagrid.DataSource = dt;
+            }else if(custompackageRB.Checked)
+            {
+                var reader = connect.Connection("select * from customoffer Where custom_id='" + id + "'");
                 DataTable dt = new DataTable();
                 dt.Load(reader);
                 admindatagrid.DataSource = dt;
@@ -234,6 +247,14 @@ namespace Travel_World
                 {
                     var reader = connect.Connection("DELETE FROM Package Where p_id='" + id + "'");
                     MessageBox.Show("Package Delete done");
+                }else if(transactionRB.Checked)
+                {
+                    var reader = connect.Connection("DELETE FROM TransactionDetails Where Payment_id='" + id + "'");
+                    MessageBox.Show("Transaction Delete done");
+                }else if(customerRB.Checked)
+                {
+                    var reader = connect.Connection("DELETE FROM customoffer Where custom_id='" + id + "'");
+                    MessageBox.Show("Custom Package Delete done");
                 }
 
 

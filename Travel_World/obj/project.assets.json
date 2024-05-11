@@ -475,11 +475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\5th Semester\\OBJECT ORIENTED PROGRAMMING 2\\Final\\Travel_World\\Travel_World\\Travel_World\\Travel_World.csproj",
+      "projectUniqueName": "D:\\5th Semester\\OBJECT ORIENTED PROGRAMMING 2\\Final\\Travel_World\\Travel_World\\Travel_World.csproj",
       "projectName": "Travel_World",
-      "projectPath": "D:\\5th Semester\\OBJECT ORIENTED PROGRAMMING 2\\Final\\Travel_World\\Travel_World\\Travel_World\\Travel_World.csproj",
+      "projectPath": "D:\\5th Semester\\OBJECT ORIENTED PROGRAMMING 2\\Final\\Travel_World\\Travel_World\\Travel_World.csproj",
       "packagesPath": "C:\\Users\\GKisl\\.nuget\\packages\\",
-      "outputPath": "D:\\5th Semester\\OBJECT ORIENTED PROGRAMMING 2\\Final\\Travel_World\\Travel_World\\Travel_World\\obj\\",
+      "outputPath": "D:\\5th Semester\\OBJECT ORIENTED PROGRAMMING 2\\Final\\Travel_World\\Travel_World\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\GKisl\\AppData\\Roaming\\NuGet\\NuGet.Config",
