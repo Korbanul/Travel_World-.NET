@@ -1,4 +1,7 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -206,13 +209,15 @@ namespace Travel_World
                 DataTable dt = new DataTable();
                 dt.Load(reader);
                 admindatagrid.DataSource = dt;
-            }else if(transactionRB.Checked)
+            }
+            else if (transactionRB.Checked)
             {
                 var reader = connect.Connection("select * from TransactionDetails Where Payment_id='" + id + "'");
                 DataTable dt = new DataTable();
                 dt.Load(reader);
                 admindatagrid.DataSource = dt;
-            }else if(custompackageRB.Checked)
+            }
+            else if (custompackageRB.Checked)
             {
                 var reader = connect.Connection("select * from customoffer Where custom_id='" + id + "'");
                 DataTable dt = new DataTable();
@@ -247,11 +252,13 @@ namespace Travel_World
                 {
                     var reader = connect.Connection("DELETE FROM Package Where p_id='" + id + "'");
                     MessageBox.Show("Package Delete done");
-                }else if(transactionRB.Checked)
+                }
+                else if (transactionRB.Checked)
                 {
                     var reader = connect.Connection("DELETE FROM TransactionDetails Where Payment_id='" + id + "'");
                     MessageBox.Show("Transaction Delete done");
-                }else if(customerRB.Checked)
+                }
+                else if (customerRB.Checked)
                 {
                     var reader = connect.Connection("DELETE FROM customoffer Where custom_id='" + id + "'");
                     MessageBox.Show("Custom Package Delete done");
@@ -322,5 +329,96 @@ namespace Travel_World
             dt.Load(reader);
             admindatagrid.DataSource = dt;
         }
+
+       
+        private void export_pdf_Click(object sender, EventArgs e)
+        {
+           if (admindatagrid.Rows.Count > 0)
+             {
+              SaveFileDialog saveFileDialog = new SaveFileDialog
+              {
+                Filter = "PDF (*.pdf)|*.pdf",
+                FileName = "Result.pdf"
+              };
+
+              if (saveFileDialog.ShowDialog() == DialogResult.OK)
+              {
+                if (File.Exists(saveFileDialog.FileName))
+                {
+                    MessageBox.Show("Change the File Name");
+                }
+                else
+                {
+                    try
+                    {
+                        PdfPTable pdfTable = new PdfPTable(admindatagrid.Columns.Count)
+                        {
+                            DefaultCell = { Padding = 1 },
+                            WidthPercentage = 100,
+                            HorizontalAlignment = Element.ALIGN_LEFT
+                        };
+
+                            // Add headers
+
+                            // Set the minimum height for the header row
+                            float rowHeight = 20f; // Adjust the value as needed
+
+
+                            foreach (DataGridViewColumn column in admindatagrid.Columns)
+                        {
+                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText))
+                                {
+                                    BackgroundColor = new BaseColor(240, 240, 240),MinimumHeight = rowHeight // Optional: Add background color
+
+                                };
+                            pdfTable.AddCell(cell);
+                        }
+
+                            // Add rows
+                            
+                            foreach (DataGridViewRow row in admindatagrid.Rows)
+                            {
+                                // Ensure we are not processing a new row placeholder
+                                if (!row.IsNewRow)
+                                {
+                                    foreach (DataGridViewCell cell in row.Cells)
+                                    {
+                                        // Check for null values in the cell
+                                        PdfPCell pdfCell = new PdfPCell(new Phrase(cell.Value == null ? string.Empty : cell.Value.ToString()))
+                                        {
+                                            MinimumHeight = rowHeight
+                                            
+                                        };
+                                        pdfTable.AddCell(pdfCell);
+                                    }
+                                }
+                            }
+
+                            // Save PDF
+                            using (FileStream stream = new FileStream(saveFileDialog.FileName, FileMode.Create))
+                        {
+                            Document pdfDoc = new Document(PageSize.A4, 8f, 16f, 16f, 8f);
+                            PdfWriter.GetInstance(pdfDoc, stream);
+                            pdfDoc.Open();
+                            pdfDoc.Add(pdfTable);
+                            pdfDoc.Close();
+                            stream.Close();
+                        }
+
+                        MessageBox.Show("Export Successful", "Info");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}");
+                    }
+                }
+              }
+           }
+            else
+            {
+            MessageBox.Show("No data found");
+             }
+        }
+
     }
 }

@@ -65,6 +65,7 @@
             custompackageB = new Button();
             transactionRB = new RadioButton();
             custompackageRB = new RadioButton();
+            export_pdf = new Button();
             ((System.ComponentModel.ISupportInitialize)admindatagrid).BeginInit();
             totaladminP.SuspendLayout();
             total_customerP.SuspendLayout();
@@ -507,12 +508,27 @@
             custompackageRB.Text = "Custom Package";
             custompackageRB.UseVisualStyleBackColor = true;
             // 
+            // export_pdf
+            // 
+            export_pdf.BackgroundImageLayout = ImageLayout.None;
+            export_pdf.FlatStyle = FlatStyle.Popup;
+            export_pdf.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            export_pdf.ForeColor = Color.Chartreuse;
+            export_pdf.Location = new Point(1270, 273);
+            export_pdf.Name = "export_pdf";
+            export_pdf.Size = new Size(127, 33);
+            export_pdf.TabIndex = 70;
+            export_pdf.Text = "Export PDF";
+            export_pdf.UseVisualStyleBackColor = true;
+            export_pdf.Click += export_pdf_Click;
+            // 
             // AdminDashbord
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(41, 44, 51);
             ClientSize = new Size(1455, 796);
+            Controls.Add(export_pdf);
             Controls.Add(custompackageRB);
             Controls.Add(transactionRB);
             Controls.Add(custompackageB);
@@ -594,5 +610,6 @@
         private Button custompackageB;
         private RadioButton transactionRB;
         private RadioButton custompackageRB;
+        private Button export_pdf;
     }
 }
